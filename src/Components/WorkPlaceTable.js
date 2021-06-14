@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import Context from '../Context/Context';
 import WorkPlaceTableRow from './WorkPlaceTableRow';
 import EditingRow from './EditingRow';
+import '../App.css';
 
 
 function WorkPlaceTable(){
@@ -12,9 +13,9 @@ function WorkPlaceTable(){
       <table className="table table-sm">
   <thead>
     <tr>
-      <th scope="col" className="p-3 mb-2 bg-primary text-white">Prédio</th>
       <th scope="col" className="p-3 mb-2 bg-primary text-white">Local de Trabalho</th>
-      <th scope="col" className="p-3 mb-2 bg-primary text-white"></th>
+      <th scope="col" className="p-3 mb-2 bg-primary text-white">Prédio</th>
+      <th scope="col" className="p-3 mb-2 bg-primary text-white">1</th>
     </tr>
   </thead>
   

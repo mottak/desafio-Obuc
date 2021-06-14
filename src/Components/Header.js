@@ -1,10 +1,8 @@
 import React from 'react';
 import headerImage from '../Images/headerImage.png';
-
-
+import '../App.css';
 
 function Header(){
-
 
   return(
     <div>

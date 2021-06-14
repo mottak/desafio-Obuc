@@ -6,19 +6,19 @@ function WorkPlaceTableRow({ placeBuild, index, setIsEditing }){
 
 console.log(placeBuild)
   return(
-    <div>
+
+      <tr className="row-container" >
       {placeBuild && placeBuild.place && 
       <tr>
-        <td>{placeBuild.place}</td>
-        <td>{placeBuild.build}</td>
-        <td>
+        <td className="row-item">{placeBuild.place}</td>
+        <td className="row-item">{placeBuild.build}</td>
+        <td className="row-item">
           <EditDeleteButton place={placeBuild.place} index={index} setIsEditing={setIsEditing} />
         </td>
-      </tr>
-
+        </tr>
       }
+      </tr>
      
-    </div>
   );
 }
 

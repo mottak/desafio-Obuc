@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import Context from '../Context/Context';
+import { GoCheck, GoX } from 'react-icons/go';
+
+
 
 function ConfirmButton({ placeBuild, index, setIsEditing }){
   const { allWorkPlace, setAllWorkPlace } = useContext(Context);
@@ -17,8 +20,8 @@ function ConfirmButton({ placeBuild, index, setIsEditing }){
 
   return(
     <div>
-      <button type="button" onClick={handleConfirm}>v</button>
-      <button type="button" onClick={handleCancel}>x</button>
+      <button type="button" className="btn btn-light" onClick={handleConfirm}><GoCheck /></button>
+      <button type="button" className="btn btn-light" onClick={handleCancel}><GoX /></button>
     </div>
   );
 }

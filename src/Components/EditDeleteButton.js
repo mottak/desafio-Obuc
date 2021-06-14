@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import Context from '../Context/Context';
+import { RiPencilFill } from 'react-icons/ri';
+import { BsTrashFill } from 'react-icons/bs';
+
 
 function EditDeleteButton({place, index, setIsEditing}){
   const { allWorkPlace, setAllWorkPlace } = useContext(Context);
@@ -18,8 +21,8 @@ function EditDeleteButton({place, index, setIsEditing}){
 
   return(
     <div>
-      <button type="button" onClick={handleEdit}>Edit</button>
-      <button type="button" onClick={handleDelete}>Delete</button>
+      <button type="button" className="btn btn-light" onClick={handleEdit}><RiPencilFill /></button>
+      <button type="button" className="btn btn-light" onClick={handleDelete}><BsTrashFill /></button>
     </div>
   );
 }

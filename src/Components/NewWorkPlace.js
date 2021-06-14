@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Context from '../Context/Context'
+import '../App.css';
 
 function NewWorkPlace(){
  
@@ -7,14 +8,25 @@ function NewWorkPlace(){
 
 
   return(
-    <div>
-      <label>
+    <div className="input-container form-group">
+      <label className="input-item" for="placeInput">
         Local de trabalho:
-        <input type="text" value={newPlace} onChange={({ target })=>{ setNewPlace(target.value) }}/>
+        <input
+          type="text"
+          id="placeInput"
+          className="form-control"
+          value={newPlace}
+          onChange={({ target })=>{ setNewPlace(target.value) }}
+        />
       </label>
-      <label>
+      <label className="input-item" for="buildInput">
       Prédio:
-        <select value={newBuild} onChange={({ target })=>{setNewBuild(target.value)}}>
+        <select
+          value={newBuild}
+          className="form-control"
+          id="buildInput"
+          onChange={({ target })=>{setNewBuild(target.value)}}
+        >
           {buildings.map((build)=>{
             return(
               <option key={build}>{build}</option>
@@ -23,8 +35,8 @@ function NewWorkPlace(){
           
         </select>
       </label>
-      <button type="button" onClick={ handleSubmit }>
-        Adicionar
+      <button type="button"  className="btn btn-light" onClick={ handleSubmit }>
+        +
       </button>
     </div>
   );

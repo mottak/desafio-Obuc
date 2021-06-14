@@ -9,18 +9,14 @@ function Provider({ children }) {
 
 
   useEffect(() => {
-
+    console.log(allWorkPlace)
+    sessionStorage.setItem('arrLocaisTrabalho', JSON.stringify(allWorkPlace));
   }, [allWorkPlace] )
 
   const handleSubmit = async () =>{
-    // const storage = JSON.parse(sessionStorage.getItem('arrLocaisTrabalho'));
-    setAllWorkPlace([...allWorkPlace, { place: newPlace, build: newBuild }]);
 
-    // storage.push(allWorkPlace);
-    // const workPlace = JSON.stringify(allWorkPlace);
-
-    // sessionStorage.setItem('arrLocaisTrabalho', workPlace);
-
+    setAllWorkPlace([...allWorkPlace, { place: newPlace, build: newBuild }]); 
+    
     setNewPlace('');
     setNewBuild('');
   }
