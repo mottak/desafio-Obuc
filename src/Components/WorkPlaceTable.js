@@ -10,24 +10,26 @@ function WorkPlaceTable(){
   const [isEditing, setIsEditing] = useState({ enable: false, index: 0 });
   return(
     <div>
-      <table className="table table-sm">
+      <table className="table table-bordered table-hover">
   <thead>
     <tr>
-      <th scope="col" className="p-3 mb-2 bg-primary text-white">Local de Trabalho</th>
-      <th scope="col" className="p-3 mb-2 bg-primary text-white">Prédio</th>
-      <th scope="col" className="p-3 mb-2 bg-primary text-white">1</th>
+      <th className="col-sm-5 table-header text-white">Prédio</th>
+      <th className="col-sm-5 table-header text-white">Local de Trabalho</th>
+      <th className="col-sm-2 table-header text-white"></th>
     </tr>
   </thead>
   
+  <tbody  >
     {allWorkPlace.map((placeBuild, index) =>{ 
       return(
-        <tbody key={index} >
+        <tr key={index} className="row-container" >
           {isEditing.enable && isEditing.index === index
             ? <EditingRow placeBuild={placeBuild} index={index} setIsEditing={setIsEditing} />
             : <WorkPlaceTableRow placeBuild={placeBuild} index={index} setIsEditing={setIsEditing} />}
-        </tbody>
-      );
-    })}
+            </tr>
+            );
+          })}
+       </tbody>
   
 </table>
     </div>

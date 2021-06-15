@@ -9,12 +9,12 @@ function WorkPlace(){
   return(
     <div>
       <Header />
-      <div className="container">
-        
-        <SideBar className="side-bar" />
-        <div className="container-func">
-          <h2>Locais de Trabalho:</h2>
-          <div className="container-func-table">
+
+      <div className="content row">  
+        <SideBar />
+        <div className="main-container col-xl-10 col-lg-9 col-sm-8">
+          <h5>Locais de Trabalho:</h5>
+          <div className="main-container-table">
             <NewWorkPlace />
             <WorkPlaceTable />
           </div>

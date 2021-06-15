@@ -17,7 +17,6 @@ function EditingRow({ placeBuild, index, setIsEditing }){
     <div>
       {place !== '' &&
       <tr>
-        <td><input type="text" value={place} onChange={({target})=>{setPlace(target.value)}} /></td>
         <td>
           <select value={build} onChange={({target})=>{setBuild(target.value)}}>
             { buildings.map((build) => (
@@ -25,6 +24,7 @@ function EditingRow({ placeBuild, index, setIsEditing }){
             ))}
           </select>
         </td>
+        <td><input type="text" value={place} onChange={({target})=>{setPlace(target.value)}} /></td>
         
         <td>
           <ConfirmButton placeBuild={{place, build }} index={index} setIsEditing={setIsEditing}/>
