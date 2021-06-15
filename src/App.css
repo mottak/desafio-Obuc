@@ -37,15 +37,34 @@
 
 .main-container{
   padding: 15px;
-  background-color: rgb(224,255,255);
+  background-color: #f0f0f0;
   width: 100%;
 
 }
 
+.main-container h5{
+  padding: 10px 25px 0 25px;
+  color: rgb(8,77,110);
+  
+}
+
+.underline-title{
+  width: 92%;
+  height: 2px;
+  background-color: rgba(8,77,110,0.7);
+  align-self: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-container-table{
   background-color: white;
+  border-radius: 5px;
   margin: 20px;
   padding: 10px;
+  height: 750px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
 
 .nav-bar {
@@ -73,10 +92,17 @@
 }
 
 .row-container{
-  width: 100% !important;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+.edit-input{
+  max-width: 150px;
+}
+
+.row-last-child{
+  width: 110px;
 }
 
 .table {
@@ -105,5 +131,13 @@
 
 p {
   margin: 0;
+}
+
+.add-button{
+  margin-left: 10px;
+  margin-top: 15px;
+  max-height: 30px;
+  width: 30px;
+  align-self: center;
 }
 

@@ -14,6 +14,7 @@ function WorkPlace(){
         <SideBar />
         <div className="main-container col-xl-10 col-lg-9 col-sm-8">
           <h5>Locais de Trabalho:</h5>
+          <div className="underline-title"/>
           <div className="main-container-table">
             <NewWorkPlace />
             <WorkPlaceTable />

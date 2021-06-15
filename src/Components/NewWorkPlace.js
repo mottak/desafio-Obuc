@@ -35,7 +35,7 @@ function NewWorkPlace(){
           
         </select>
       </label>
-      <button type="button"  className="btn btn-light" onClick={ handleSubmit }>
+      <button type="button"  className="btn btn-light btn-sm add-button" onClick={ handleSubmit }>
         +
       </button>
     </div>

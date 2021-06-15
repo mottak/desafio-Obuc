@@ -14,25 +14,31 @@ function EditingRow({ placeBuild, index, setIsEditing }){
   }, []);
 
   return(
-    <div>
+    <>
       {place !== '' &&
-      <tr>
-        <td>
+      <>
+        <td className="row-item">
           <select value={build} onChange={({target})=>{setBuild(target.value)}}>
             { buildings.map((build) => (
               <option key={build}>{build}</option>
             ))}
           </select>
         </td>
-        <td><input type="text" value={place} onChange={({target})=>{setPlace(target.value)}} /></td>
+        <td className="row-item">
+          <input
+            type="text"
+            className="edit-input"
+            value={place}
+            onChange={({target})=>{setPlace(target.value)}}
+          />
+        </td>
         
-        <td>
+        <td className="row-last-child">
           <ConfirmButton placeBuild={{place, build }} index={index} setIsEditing={setIsEditing}/>
         </td>
-      </tr>
+      </>
       }
-     
-    </div>
+    </>
   );
 }
 

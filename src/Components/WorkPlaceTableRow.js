@@ -9,9 +9,9 @@ console.log(placeBuild)
       <>
       {placeBuild && placeBuild.place && 
       <>
-        <td className="col-sm-4 row-item">{placeBuild.build}</td>
-        <td className="col-sm-4 row-item">{placeBuild.place}</td>
-        <td className="col-sm-4 row-item">
+        <td className="row-item">{placeBuild.build}</td>
+        <td className="row-item">{placeBuild.place}</td>
+        <td className="row-last-child">
           <EditDeleteButton place={placeBuild.place} index={index} setIsEditing={setIsEditing} />
         </td>
       </>
