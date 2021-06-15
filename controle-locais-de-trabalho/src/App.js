@@ -1,10 +1,11 @@
-import './App.css';
+import Provider from './Context/Provider';
+import WorkPlace from './Pages/WorkPlace';
 
 function App() {
   return (
-    <div className="App">
-    controles locais de trabalho
-    </div>
+    <Provider>
+      <WorkPlace />
+    </Provider>
   );
 }
 
